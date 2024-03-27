@@ -1,0 +1,527 @@
+/* css map---------------------------- */
+/* color variables Line no 22 -------- */
+/* body style Line no 42 --------------*/
+/* Container styles Line no  52 -----  */
+
+/* Left panel styles Line no 64 ------ */
+ /* -Left panel trinagle css Line no 75*/
+ /* Profile styles Line no 87 -------- */
+ /* Image box styling Line no 95  ---- */
+ /* Progress bar styles Line no 235   */
+
+
+/* Right panel CSS starts here Line no 405 */
+/* Side line styles Line no 456 --------- */
+/* Media queries Line no 475 ----------- */
+
+
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans&display=swap');
+
+/* Define color variables */
+:root {
+    --yellow-shade: rgb(242, 171, 1);
+    --left-panel: rgb(51, 51, 51);
+    --right-heading: rgb(52, 52, 52);
+    --right-text: rgb(71, 71, 71);
+    --color-white: rgb(255, 255, 255);
+    --bar-background: rgb(204, 204, 204);
+    --head-text-font: 1.8em;
+    --sub-text-font: 1.2em;
+    --small-text-font: 1.1em;
+}
+
+/* Reset CSS */
+* {
+    font-family: "Nunito Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    background: rgb(221, 221, 221);
+}
+
+/* Container styles */
+.container {
+    position: relative;
+    width: 100vw;
+    max-width: 1000px;
+    min-height: 1000px;
+    margin: 55px;
+    background-color: #fff;
+    box-shadow: 0px 0px 12px 0px black;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+/* Left panel styles */
+.container .left__side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Align items horizontally at the center */
+    padding: 38px;
+    position: relative;
+    background: var(--left-panel);
+}
+
+/* Left panel triangle */
+.container .left__triangle {
+    width: 0;
+    height: 0;
+    border-top: 350px solid var(--yellow-shade);
+    border-right: 400px solid transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+/* Profile styles */
+.profile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+/* Image box styling */
+.profile .imgBox {
+    margin-top: 25px;
+    width: 200px;
+    height: 200px;
+    border: 8px solid #fff;
+    border-radius: 50% 50% 50% 0%;
+    position: relative;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.profile .imgBox img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* object-fit:cover; */
+    text-align: center;
+    z-index: 5;
+}
+
+/* Contact info styles */
+.contactInfo {
+    padding-top: 40px;
+}
+
+.contactInfo .contact-box-top,
+.contactInfo .contact-box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    justify-content: center;
+    padding: 8px 13px;
+    align-items: center;
+}
+
+/* Contact details styles */
+.contactInfo .contact-details {
+    color: var(--color-white);
+    padding: 0 10px;
+    margin-bottom: 22px;
+}
+
+.contactInfo .contact-details h2 {
+    font-size: var(--sub-text-font);
+    padding: 6px 0;
+    text-transform: uppercase;
+}
+
+.contactInfo .contact-details p {
+    font-size: var(--small-text-font);
+    font-weight: 100;
+}
+
+.contactInfo .contact-details p a {
+    text-decoration: none;
+    color: var(--color-white);
+}
+
+/* Contact box styles */
+.contactInfo .contact-box.contact-box-top {
+    align-items: unset;
+}
+
+.contactInfo>.contact-box>.left-main-icon i,
+.contact-box .left-small-icon {
+    background-color: #fff;
+    color: black;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+    border-radius: 50%;
+    text-align: center;
+    padding: 5px 0;
+    margin-top: 8px;
+}
+
+.contact-box .left-small-icon {
+    background-color: #fff;
+    color: black;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 4px 0;
+    font-size: 0.8em;
+}
+
+.contact-box .left-contact-details p {
+    color: var(--color-white);
+    font-weight: 300;
+    font-size: var(--small-text-font);
+    text-decoration: none;
+}
+
+.contact-box .left-contact-details p a {
+    color: var(--color-white);
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.contactInfo {
+    padding-bottom: 30px;
+    border-bottom: 2px dashed white;
+}
+
+.contactInfo.no-border-bottom {
+    border-bottom: none;
+}
+
+/* Left main text */
+.contactInfo .contact-box .left-main-head .title {
+    color: #fff;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.contactInfo ul {
+    position: relative;
+}
+
+.contactInfo.education h5 {
+    font-weight: 500;
+    color: #fff;
+}
+
+.contactInfo.education h4:nth-child(2) {
+    font-weight: 500;
+    color: aliceblue;
+}
+
+.contactInfo.education h4 {
+    color: #fff;
+    font-weight: 300;
+}
+
+/* Progress bar styles */
+.contactInfo.language .percent,
+.skills .box .percent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #2d2d2d;
+    display: block;
+    margin: 5px;
+    border-radius: 50px;
+}
+
+.contactInfo.language .percent div,
+.skills .box .percent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: var(--yellow-shade);
+}
+
+/* Right panel CSS starts here */
+
+.container .right__side {
+    position: relative;
+    background-color: var(--color-white);
+    padding: 68px 52px 58px 102px;
+}
+
+.right__triangle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-left: 75px solid transparent;
+    border-bottom: 75px solid var(--yellow-shade);
+}
+
+.about {
+    margin-bottom: 80px;
+    margin-top: 240px;
+}
+
+.right__side .intro {
+    background-color: rgb(240, 240, 240);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    padding: 30px 52px 30px 102px;
+}
+
+.right__side .intro h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.5em;
+}
+
+.right__side .intro h1 span {
+    color: var(--yellow-shade);
+}
+
+.intro p {
+    text-transform: uppercase;
+    color: var(--right-text);
+    font-size: var(--small-text-font);
+}
+
+.about:last-child {
+    margin-bottom: 0;
+}
+
+.title2 {
+    color: var(--right-heading);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    font-size: var(--head-text-font);
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.right-icon {
+    background-color: var(--yellow-shade);
+    display: inline-block;
+    width: 35px;
+    padding: 4px 0;
+    height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 22px;
+    margin: 0 12px 0 0;
+}
+
+.right-text {
+    color: var(--right-text);
+    font-size: var(--small-text-font);
+    text-align: justify;
+    font-weight: 600;
+}
+
+.experience {
+    margin-bottom: 80px;
+}
+
+.job-experiences {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.experience .box .right-text.job-desc {
+    margin-bottom: 40px;
+}
+
+.job_name {
+    color: var(--right-heading);
+    font-size: var(--sub-text-font);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.job_year {
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.job_place {
+    font-style: italic;
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: var(--small-text-font);
+}
+
+.job-experiences .job-details .job-na .about .box {
+    margin: 20px 0;
+}
+
+.skills .box {
+   display:grid
+}
+
+.skills .box .text {
+    width: 100%;
+    padding: 0 6px;
+    color: var(--right-heading);
+    font-weight: 900;
+}
+
+/* Right panel border top of the line styles */
+.intro::before,
+.title2::before,
+.skills-head::before,
+.title2.about-head::before {
+    position: absolute;
+    content: "";
+    top: 20%;
+    border-radius: 50px;
+    left: 9%;
+    width: 2%;
+    border: 1px solid var(--yellow-shade);
+    height: 4%;
+    background-color: var(--yellow-shade);
+    z-index: 2;
+}
+/* Adjustment for the intro top line */
+.intro::before {
+   top: 6px;
+   left: 9.3%;
+   height: 90%;  
+} 
+
+/* Adjustments for other top lines */
+.title2::before {
+    top: 38%;
+}
+.skills-head::before {
+    top: 82%;
+}
+
+/* Left panel border top of the line styles */
+/* .yellow-flag-border-left::before,
+.yellow-flag-border-left-small::before {
+    position: absolute;
+    content: "";
+    top: 6px;
+    border-radius: 50px;
+    left: -12.8%;
+    width: 2%;
+    border: 2px solid var(--yellow-shade);
+    height: 65%;
+    background-color: var(--yellow-shade);
+    z-index: 2;
+}  */
+
+/* .yellow-flag-border-left-small::before {
+    top: 26px;  
+    height: 10%;
+}  */
+
+/* Side line styles */
+/* .left__side::before, */
+.right__side::before {
+    height: 100vh;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 10%;
+    height: 100%;
+    border: 2px solid gray;
+    z-index: 2;
+}
+
+.right__side::before {
+    border: 2px solid black;
+}
+
+/* Right panel CSS ends here */
+
+/* Media queries */
+@media (max-width:1100px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .container .right__side {
+        padding: 68px 52px 58px 180px;
+    }
+
+    .container .left__triangle {
+        border-top: 200px solid var(--yellow-shade);
+        border-right: 200px solid transparent;
+    }
+
+    .profile {
+        border-bottom: 2px solid rgb(190, 190, 190);
+    }
+
+    .right__side .intro {
+        text-align: center;
+    }
+
+    .left__side::before,
+    .right__side::before {
+        left: 13%;
+    }
+    .intro::before,
+    .yellow-flag-border-right-sub::before,
+    .title2::before,
+    .skills-head::before,
+    .title2.about-head::before {
+        left: 12.2%;
+    }
+
+    .yellow-flag-border-left::before,
+    .yellow-flag-border-left-small::before {
+        display: none;
+    }
+    .left__side::before {
+        display: none;
+    }
+}
+
+@media (max-width:800px) {
+    .about .box {
+        flex-direction: column;
+    }
+
+    .about .box .year_company {
+        min-width: 150px;
+        margin-bottom: 10px;
+    }
+    .skills .box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width:653px) {
+    .left__side::before,
+    .right__side::before {
+        display: none;
+    }
+
+    .container .right__side {
+        padding: 68px 52px 58px 100px;
+    }
+    .intro::before,
+    .yellow-flag-border-right-sub::before,
+    .title2::before,
+    .skills-head::before,
+    .title2.about-head::before {
+        display: none;
+    }
+}
